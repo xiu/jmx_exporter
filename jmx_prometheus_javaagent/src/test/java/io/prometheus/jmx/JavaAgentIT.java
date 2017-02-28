@@ -92,6 +92,8 @@ public class JavaAgentIT {
                 app.getOutputStream().flush();
             } catch (IOException ignored) {
             }
+        } catch (Exception exc) {
+            System.out.println(exc);
         } finally {
             final int exitcode = app.waitFor();
             // Log any errors printed
